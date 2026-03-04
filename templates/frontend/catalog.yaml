@@ -1,0 +1,73 @@
+{
+    "kind": "List",
+    "apiVersion": "v1",
+    "metadata": {},
+    "items": [
+        {
+            "apiVersion": "build.openshift.io/v1",
+            "kind": "BuildConfig",
+            "metadata": {
+                "labels": {
+                    "app": "catalog-ui",
+                    "group": "catalog",
+                    "key": "value"
+                },
+                "name": "catalog-ui"
+            },
+            "spec": {
+                "output": {
+                    "to": {
+                        "kind": "DockerImage",
+                        "name": "registry.domain1.example.com/catalog-ui:latest"
+                    }
+                },
+                "source": {
+                    "git": {
+                        "ref": "main",
+                        "uri": "https://git.domain1.example.com.5000/finesmart/catalog-frontend.git"
+                    },
+                    "sourceSecret": {
+                        "name": "catalog-ui-git-secret"
+                    },
+                    "type": "Git"
+                },
+                "strategy": {
+                    "sourceStrategy": {
+                        "env": [
+                            {
+                                "name": "NPM_MIRROR",
+                                "value": "http://nexus.domain1.example.com:8081/repository/npm-repo"
+                            },
+                            {
+                                "name": "BACKEND_URL",
+                                "value": "https://catalog-be-petrol-db.apps.domain1.example.com/"
+                            }
+                        ],
+                        "from": {
+                            "kind": "ImageStreamTag",
+                            "name": "nodejs:18",
+                            "namespace": "openshift"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "apiVersion": "v1",
+            "kind": "Secret",
+            "metadata": {
+                "labels": {
+                    "app": "catalog-ui",
+                    "group": "catalog",
+                    "key": "value"
+                },
+                "name": "catalog-ui-git-secret"
+            },
+            "stringData": {
+                "password": "delicate",
+                "username": "devuser"
+            },
+            "type": "kubernetes.io/basic-auth"
+        }
+    ]
+}

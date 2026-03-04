@@ -2,6 +2,8 @@ apiVersion: template.openshift.io/v1
 kind: Template
 metadata:
   name: catalog-frontend-deploy
+  app: catalog-ui
+  group: catalog
 
 parameters:
 
