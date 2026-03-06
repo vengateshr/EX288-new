@@ -4,6 +4,8 @@ metadata:
   name: employee-pipeline
 spec:
   params:
+    - name: registry_url
+      type: string
     - name: deployment-name
       type: string
     - name: git-url
@@ -46,7 +48,7 @@ spec:
           - name: source
         steps:
           - name: build
-            image: 
+            image: registry.domain1.example.com/ubi9/openjdk-17:latest
             workingDir: $(workspaces.source.path)
             script: |
               echo "Using Maven mirror: $(params.MAVEN_MIRROR_URL)"
