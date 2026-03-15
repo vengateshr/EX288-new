@@ -1,11 +1,11 @@
 FROM ubi-micro:latest
 
-ARG BUILDREPO=https://incorrect-url
+ARG BUILDREPO=http://downloads.domain42.example.com/postal-1.0
 
 WORKDIR /opt/app-root
 
 # Download the application binary during build
-ADD ${BUILDREPO} /opt/app-root/postal-1.0 
+ADD ${BUILDREPO} /opt/app-root/postal-1.0
 
 USER 0
 
