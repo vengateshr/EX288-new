@@ -1,6 +1,6 @@
 FROM ubi-micro:latest
 
-ARG BUILDREPO=http://downloads.domain42.example.com/postal-1.0
+ARG BUILDREPO=https://github.com/vengateshr/EX288-new.git
 
 WORKDIR /opt/app-root
 
