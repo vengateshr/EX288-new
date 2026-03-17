@@ -1,9 +1,12 @@
 image:
   repository: registry.domain1.example.com/finesmart/customer-backend
 
-stage: deve2
+stage:devel
 
 resources:
   limits:
     cpu: 250m
-    memory: 512Mi
+    memory:512Mi
+
+
+
