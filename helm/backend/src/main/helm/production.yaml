@@ -5,9 +5,10 @@ stage: production
 
 replicaCount: 2
 
+
 resources:
   limits:
-    cpu: 500m
+    cpu: 500mi
     memory: 1Gi
+secureTransport: "True"
 
-secureTransport: "true"
