@@ -1,7 +1,7 @@
 image:
   repository: registry.domain1.example.com/finesmart/customer-backend
 
-stage: devel
+stage: deve2
 
 resources:
   limits:
