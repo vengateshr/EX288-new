@@ -1,6 +1,6 @@
 FROM ubi-micro:latest
 
-ARG BUILDREPO=https://github.com/vengateshr/EX288-new.git
+ARG BUILDREPO= https://github.com/vengateshr/EX288-new.git
 
 WORKDIR /opt/app-root
 
