@@ -1,6 +1,6 @@
 FROM ubi-micro:latest
 
-ARG BUILDREPO= https://github.com/vengateshr/EX288-new.git
+ARG BUILDREPO=https://github.com/shwetha-87/EX288/raw/refs/heads/main/binary/postal-1.0 
 
 WORKDIR /opt/app-root
 
