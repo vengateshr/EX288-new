@@ -3,10 +3,11 @@ image:
 
 stage: production
 
-replicaCount: 3
+replicaCount: 2
 
 resources:
   limits:
-    cpu: 500mi
+    cpu: 500m
     memory: 1Gi
+
 secureTransport: "true"
