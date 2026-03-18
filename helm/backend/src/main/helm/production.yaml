@@ -9,4 +9,4 @@ resources:
   limits:
     cpu: 500mi
     memory: 1Gi
-secureTranspot: "true"
+secureTransport: "true"
