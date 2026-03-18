@@ -6,7 +6,4 @@ stage: devel
 resources:
   limits:
     cpu: 250m
-    memory: 512Mi
-
-
-
+    memort: 512Mi
