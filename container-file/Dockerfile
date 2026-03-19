@@ -1,6 +1,6 @@
-FROM ubi-micro:latest
+FROM httpd:latest
 
-ARG BUILDREPO=https://github.com/shwetha-87/EX288/raw/refs/heads/main/binary/postal-1.0 
+ARG BUILDREPO= https://github.com/shwetha-87/EX288/raw/refs/heads/main/binary/postal-1.0
 
 WORKDIR /opt/app-root
 
